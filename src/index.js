@@ -13,17 +13,17 @@ addLocaleData([...ja, ...en, ...es]);
 // Locale data, probably better to keep in a separate file
 const messages = {
     'en-US': {
-      'salute': 'Hello!',
+      'salute': 'Hello {name}!',
       'now': 'Today\'s date is:',
       'cats': 'I have {count} cats'
     },
     'ja-JP': {
-      'salute': 'こんにちは!',
+      'salute': '{name}さん こんにちは!',
       'now': '今日は:',
       'cats': '私は{count}匹の猫がいる'
     },
     'es-ES': {
-      'salute': '¡Hola!',
+      'salute': '¡Hola {name}!',
       'now': 'El dia de hoy es:',
       'cats': 'Tengo {count} gatos'
     }
@@ -31,8 +31,8 @@ const messages = {
 
 // Bad way to set locale, you could probably use the browser locale, 
 // or change it globally on a redux store
-const localeCode = 'en-US';
-// const localeCode = 'ja-JP';
+// const localeCode = 'en-US';
+const localeCode = 'ja-JP';
 // const localeCode = 'es-ES';
 
 ReactDOM.render(

@@ -27,7 +27,7 @@ class Hello extends React.Component {
       return (
           <div>
               <div>
-                  { this.props.intl.formatMessage(this.messages.salute) }
+                  { this.props.intl.formatMessage(this.messages.salute, {name: 'Michael'}) }
               </div>
               <div>
                 {this.props.intl.formatMessage(this.messages.now) } {this.props.intl.formatDate(Date.now(), {day:'numeric', month:'long', year:'numeric'})}
