@@ -1,9 +1,9 @@
 {
-  "name": "react-simple-boilerplate",
+  "name": "react-intl-example",
   "version": "0.0.1",
-  "description": "React + Webpack + BabelJS",
+  "description": "Basic example for React+FormatJS using react-intl",
   "main": "bundle.js",
-  "repository": "git@github.com:ivanm/react-simple-boilerplate.git",
+  "repository": "git@github.com:ivanm/react-intl-example.git",
   "author": "Ivan Mayoral <iimayoral@gmail.com>",
   "license": "Apache License 2.0",
   "scripts": {
