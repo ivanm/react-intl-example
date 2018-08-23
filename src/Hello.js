@@ -5,7 +5,6 @@ class Hello extends React.Component {
 
     constructor(props) {
         super(props);
-        
         // Messages defined on the component
         this.messages = defineMessages({
             salute: {
@@ -24,18 +23,18 @@ class Hello extends React.Component {
     }
 
     render() {
-      return (
-          <div>
-              <div>
-                  { this.props.intl.formatMessage(this.messages.salute, {name: 'Michael'}) }
-              </div>
-              <div>
-                {this.props.intl.formatMessage(this.messages.now) } {this.props.intl.formatDate(Date.now(), {day:'numeric', month:'long', year:'numeric'})}
-              </div>
-              <div>
-                  { this.props.intl.formatMessage(this.messages.cats, {count: this.props.intl.formatNumber(1000)}) }
-              </div>
-          </div>
+        return (
+            <div>
+                <div>
+                    { this.props.intl.formatMessage(this.messages.salute, {name: 'Michael'}) }
+                </div>
+                <div>
+                    { this.props.intl.formatMessage(this.messages.now) } { this.props.intl.formatDate(Date.now(), {day:'numeric', month:'long', year:'numeric'}) }
+                </div>
+                <div>
+                    { this.props.intl.formatMessage(this.messages.cats, {count: this.props.intl.formatNumber(1000)}) }
+                </div>
+            </div>
         );
     }
 }

@@ -1,6 +1,6 @@
 ## How to use
 
-Edit variable `localeCode` in `src\index` to change into a different language.
+Edit variable `localeCode` in `src\index.js` to change into a different language.
 
 ```sh
 yarn install

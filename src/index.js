@@ -13,19 +13,19 @@ addLocaleData([...ja, ...en, ...es]);
 // Locale data, probably better to keep in a separate file
 const messages = {
     'en-US': {
-      'salute': 'Hello {name}!',
-      'now': 'Today\'s date is:',
-      'cats': 'I have {count} cats'
+        'salute': 'Hello {name}!',
+        'now': 'Today\'s date is:',
+        'cats': 'I have {count} cats'
     },
     'ja-JP': {
-      'salute': '{name}さん こんにちは!',
-      'now': '今日は:',
-      'cats': '私は{count}匹の猫がいる'
+        'salute': '{name}さん こんにちは!',
+        'now': '今日は:',
+        'cats': '私は{count}匹の猫がいる'
     },
     'es-ES': {
-      'salute': '¡Hola {name}!',
-      'now': 'El dia de hoy es:',
-      'cats': 'Tengo {count} gatos'
+        'salute': '¡Hola {name}!',
+        'now': 'El dia de hoy es:',
+        'cats': 'Tengo {count} gatos'
     }
 };
 
