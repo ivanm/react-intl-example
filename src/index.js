@@ -4,36 +4,43 @@ import { addLocaleData, IntlProvider} from 'react-intl';
 
 import Hello from './Hello.js';
 
+// Import default locale data for number and formats
 import en from 'react-intl/locale-data/en';
 import ja from 'react-intl/locale-data/ja';
 import es from 'react-intl/locale-data/es';
-
 addLocaleData([...ja, ...en, ...es]);
 
+// Locale data, probably better to keep in a separate file
 const messages = {
-  'en-US': {
-    "salute": 'Hello!',
-  },
-  'ja-JP': {
-    'salute': 'こんにちは!'
-  },
-  'es-MX': {
-    'salute': '¡Hola!'
-  }
+    'en-US': {
+      'salute': 'Hello!',
+      'now': 'Today\'s date is:',
+      'cats': 'I have {count} cats'
+    },
+    'ja-JP': {
+      'salute': 'こんにちは!',
+      'now': '今日は:',
+      'cats': '私は{count}匹の猫がいる'
+    },
+    'es-ES': {
+      'salute': '¡Hola!',
+      'now': 'El dia de hoy es:',
+      'cats': 'Tengo {count} gatos'
+    }
 };
 
-// const localeCode = 'en-US';
+// Bad way to set locale, you could probably use the browser locale, 
+// or change it globally on a redux store
+const localeCode = 'en-US';
 // const localeCode = 'ja-JP';
-const localeCode = 'es-MX';
+// const localeCode = 'es-ES';
 
 ReactDOM.render(
-  <IntlProvider
-    locale={localeCode}
-    messages={messages[localeCode]}
-  >
-    <div>
-      <Hello/>
-    </div>
-  </IntlProvider>,
-  document.getElementById('app')
+    <IntlProvider
+      locale={localeCode}
+      messages={messages[localeCode]}
+    >
+        <Hello/>
+    </IntlProvider>,
+    document.getElementById('app')
 );
